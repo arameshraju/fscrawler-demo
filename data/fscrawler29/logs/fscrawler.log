@@ -1,0 +1,13 @@
+22:47:23,644 INFO  [f.p.e.c.f.c.BootstrapChecks] Memory [Free/Total=Percent]: HEAP [491.2mb/7.9gb=6.05%], RAM [8gb/31.7gb=25.47%], Swap [5.1gb/34.7gb=14.8%].
+22:47:23,924 INFO  [f.p.e.c.f.FsCrawlerImpl] Starting FS crawler
+22:47:23,924 INFO  [f.p.e.c.f.FsCrawlerImpl] FS crawler started in watch mode. It will run unless you stop it with CTRL+C.
+22:47:24,634 INFO  [f.p.e.c.f.c.v.ElasticsearchClientV7] Elasticsearch Client for version 7.x connected to a node running version 7.17.17
+22:47:24,874 INFO  [f.p.e.c.f.c.v.ElasticsearchClientV7] Elasticsearch Client for version 7.x connected to a node running version 7.17.17
+22:47:25,207 WARN  [o.e.c.RestClient] request [PUT http://127.0.0.1:9200/my_docs?master_timeout=30s&timeout=30s] returned 1 warnings: [299 Elasticsearch-7.17.17-aba4da413a368e296dfc64fb20897334d0340aa1 "Camel case format name dateOptionalTime is deprecated and will be removed in a future version. Use snake case name date_optional_time instead."]
+22:47:25,468 INFO  [f.p.e.c.f.FsParserAbstract] FS crawler started for [my_docs] for [C:/new_works/fscrawler/data/] every [15m]
+22:47:25,588 INFO  [f.p.e.c.f.t.TikaInstance] OCR is disabled.
+22:47:28,495 WARN  [o.a.p.p.f.FileSystemFontProvider] New fonts found, font cache will be re-built
+22:47:28,496 WARN  [o.a.p.p.f.FileSystemFontProvider] Building on-disk font cache, this may take a while
+22:47:31,833 WARN  [o.a.p.p.f.FileSystemFontProvider] Finished building on-disk font cache, found 573 fonts
+22:47:35,386 WARN  [o.e.c.RestClient] request [POST http://127.0.0.1:9200/my_docs/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=true&expand_wildcards=open&allow_no_indices=true&ignore_throttled=false&search_type=query_then_fetch&batched_reduce_size=512] returned 1 warnings: [299 Elasticsearch-7.17.17-aba4da413a368e296dfc64fb20897334d0340aa1 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+22:47:35,554 WARN  [o.e.c.RestClient] request [POST http://127.0.0.1:9200/my_docs_folder/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=true&expand_wildcards=open&allow_no_indices=true&ignore_throttled=false&search_type=query_then_fetch&batched_reduce_size=512] returned 1 warnings: [299 Elasticsearch-7.17.17-aba4da413a368e296dfc64fb20897334d0340aa1 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
