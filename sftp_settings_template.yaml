@@ -1,0 +1,67 @@
+# Quick SFTP Configuration Template
+# Save this as: C:\Users\YourUsername\.fscrawler\sftp_job\_settings.yaml
+
+name: "sftp_job"
+
+# SFTP Configuration
+fs:
+  # Remote path to crawl (absolute path on SFTP server)
+  url: "/home/username/documents"
+  
+  # Protocol (must be "sftp")
+  protocol: "sftp"
+  
+  # SFTP server hostname or IP
+  server: "sftp.yourcompany.com"
+  
+  # SFTP port (usually 22)
+  port: 22
+  
+  # Authentication - Choose ONE method:
+  
+  # Method 1: Username + Password
+  username: "your_username"
+  password: "your_password"
+  
+  # Method 2: Username + SSH Key (comment out password above)
+  # username: "your_username"
+  # pem_path: "C:/Users/YourName/.ssh/id_rsa"
+  
+  # Method 3: Username + SSH Key + Passphrase
+  # username: "your_username"
+  # pem_path: "C:/Users/YourName/.ssh/id_rsa"
+  # passphrase: "your_key_passphrase"
+  
+  # How often to check for changes
+  update_rate: "15m"
+  
+  # Exclude patterns
+  excludes:
+  - "*/~*"
+  - "*/.git/*"
+  - "*/node_modules/*"
+  
+  # Include only specific file types (optional)
+  # includes:
+  # - "*.pdf"
+  # - "*.docx"
+  # - "*.xlsx"
+  # - "*.txt"
+  
+  # Additional settings
+  add_filesize: true
+  remove_deleted: true
+  index_content: true
+  index_folders: true
+  lang_detect: false
+
+# Elasticsearch Configuration
+elasticsearch:
+  nodes:
+  - url: "http://localhost:9200"
+  
+  # Optional: custom index name
+  # index: "my_sftp_docs"
+  
+  bulk_size: 100
+  flush_interval: "5s"
