@@ -3,3 +3,9 @@
 
 
     .\fscrawler29\bin\fscrawler.bat --config_dir "C:\new_works\fscrawler-demo" ftp_docs --loop 1  
+
+
+
+    docker compose down -v
+docker compose up -d
+.\fscrawler29\bin\fscrawler.bat --config_dir "C:\new_works\fscrawler-demo" ftp_docs --loop 1

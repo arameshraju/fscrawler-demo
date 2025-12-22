@@ -1,10 +1,10 @@
 ---
 name: "ftp_docs"
 fs:
-  url: "/"
-  protocol: "ftp"
+  url: "/upload"
+  protocol: "sftp"
   server: "localhost"
-  port: 21
+  port: 2222
   username: "admin"
   password: "securepassword"
   update_rate: "15m"
