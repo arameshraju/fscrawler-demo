@@ -1,3 +1,4 @@
+---
 name: "ftp_docs"
 fs:
   url: "/"
@@ -23,6 +24,8 @@ fs:
   lang_detect: false
 elasticsearch:
   nodes:
-  - url: "http://localhost:9200"
+  - url: "http://127.0.0.1:9200"
   bulk_size: 100
   flush_interval: "5s"
+  byte_size: "10mb"
+  ssl_verification: false
